@@ -15,6 +15,12 @@
 		48922FAD2041967B001D10E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48922FAC2041967B001D10E8 /* Assets.xcassets */; };
 		48922FB02041967B001D10E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48922FAE2041967B001D10E8 /* LaunchScreen.storyboard */; };
 		48922FBB2041967B001D10E8 /* ChikaAvatarUploaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922FBA2041967B001D10E8 /* ChikaAvatarUploaderTests.swift */; };
+		48922FC720419886001D10E8 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922FC620419886001D10E8 /* Scene.swift */; };
+		48922FC92041990F001D10E8 /* AvatarUploader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48922FC82041990F001D10E8 /* AvatarUploader.storyboard */; };
+		48922FCB20419AFE001D10E8 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922FCA20419AFE001D10E8 /* Theme.swift */; };
+		48922FCD20419FC5001D10E8 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922FCC20419FC5001D10E8 /* Factory.swift */; };
+		48922FCF2041A1BB001D10E8 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922FCE2041A1BB001D10E8 /* Style.swift */; };
+		48922FD12041A936001D10E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48922FD02041A936001D10E8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,12 @@
 		48922FB62041967B001D10E8 /* ChikaAvatarUploaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChikaAvatarUploaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48922FBA2041967B001D10E8 /* ChikaAvatarUploaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChikaAvatarUploaderTests.swift; sourceTree = "<group>"; };
 		48922FBC2041967B001D10E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48922FC620419886001D10E8 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		48922FC82041990F001D10E8 /* AvatarUploader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AvatarUploader.storyboard; sourceTree = "<group>"; };
+		48922FCA20419AFE001D10E8 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		48922FCC20419FC5001D10E8 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		48922FCE2041A1BB001D10E8 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		48922FD02041A936001D10E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../ChikaFirebaseDemo/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49F9F20679CBB0F717B0160E /* Pods_ChikaAvatarUploaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChikaAvatarUploaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD10ADF547B2F4D4A93E997 /* Pods-ChikaAvatarUploaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaAvatarUploaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaAvatarUploaderTests/Pods-ChikaAvatarUploaderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		847DE98ABE02862801364148 /* Pods-ChikaAvatarUploader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaAvatarUploader.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaAvatarUploader/Pods-ChikaAvatarUploader.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,12 +110,14 @@
 		48922FA42041967B001D10E8 /* ChikaAvatarUploader */ = {
 			isa = PBXGroup;
 			children = (
-				48922FA52041967B001D10E8 /* AppDelegate.swift */,
-				48922FAC2041967B001D10E8 /* Assets.xcassets */,
+				48922FD02041A936001D10E8 /* GoogleService-Info.plist */,
 				48922FB12041967B001D10E8 /* Info.plist */,
+				48922FA52041967B001D10E8 /* AppDelegate.swift */,
+				48922FA72041967B001D10E8 /* ViewController.swift */,
+				48922FAC2041967B001D10E8 /* Assets.xcassets */,
 				48922FAE2041967B001D10E8 /* LaunchScreen.storyboard */,
 				48922FA92041967B001D10E8 /* Main.storyboard */,
-				48922FA72041967B001D10E8 /* ViewController.swift */,
+				48922FC52041985B001D10E8 /* Source */,
 			);
 			path = ChikaAvatarUploader;
 			sourceTree = "<group>";
@@ -115,6 +129,18 @@
 				48922FBC2041967B001D10E8 /* Info.plist */,
 			);
 			path = ChikaAvatarUploaderTests;
+			sourceTree = "<group>";
+		};
+		48922FC52041985B001D10E8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				48922FC82041990F001D10E8 /* AvatarUploader.storyboard */,
+				48922FCC20419FC5001D10E8 /* Factory.swift */,
+				48922FC620419886001D10E8 /* Scene.swift */,
+				48922FCE2041A1BB001D10E8 /* Style.swift */,
+				48922FCA20419AFE001D10E8 /* Theme.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		9A31B24BBB0E4903C7B592B5 /* Pods */ = {
@@ -219,7 +245,9 @@
 			files = (
 				48922FB02041967B001D10E8 /* LaunchScreen.storyboard in Resources */,
 				48922FAD2041967B001D10E8 /* Assets.xcassets in Resources */,
+				48922FD12041A936001D10E8 /* GoogleService-Info.plist in Resources */,
 				48922FAB2041967B001D10E8 /* Main.storyboard in Resources */,
+				48922FC92041990F001D10E8 /* AvatarUploader.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,18 +321,22 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChikaAvatarUploader/Pods-ChikaAvatarUploader-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChikaCore/ChikaCore.framework",
 				"${BUILT_PRODUCTS_DIR}/ChikaFirebase/ChikaFirebase.framework",
+				"${BUILT_PRODUCTS_DIR}/ChikaSignIn/ChikaSignIn.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseCommunity/FirebaseCommunity.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChikaCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChikaFirebase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChikaSignIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCommunity.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,9 +350,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChikaAvatarUploader/Pods-ChikaAvatarUploader-resources.sh",
+				"${PODS_ROOT}/ChikaAssets/ChikaAssets/Source/ChikaAssets.xcassets",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -350,7 +385,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				48922FA82041967B001D10E8 /* ViewController.swift in Sources */,
+				48922FCF2041A1BB001D10E8 /* Style.swift in Sources */,
+				48922FCB20419AFE001D10E8 /* Theme.swift in Sources */,
 				48922FA62041967B001D10E8 /* AppDelegate.swift in Sources */,
+				48922FC720419886001D10E8 /* Scene.swift in Sources */,
+				48922FCD20419FC5001D10E8 /* Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
