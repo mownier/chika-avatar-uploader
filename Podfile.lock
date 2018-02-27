@@ -1,4 +1,5 @@
 PODS:
+  - ChikaAssets (0.0.2)
   - ChikaCore/Error (0.18.1)
   - ChikaCore/Model:Auth (0.18.1):
     - ChikaCore/Model:Unique
@@ -15,30 +16,33 @@ PODS:
     - ChikaCore/Model:Store
     - ChikaCore/Process
     - ChikaCore/Result
-  - ChikaFirebase/Auth:SignIn (0.5):
+  - ChikaFirebase/Auth:SignIn (0.6):
     - ChikaCore/Error
     - ChikaCore/Service:Auth
     - ChikaFirebase/Validator:Auth
     - FirebaseCommunity/Auth
-  - ChikaFirebase/Auth:SignOut (0.5):
+  - ChikaFirebase/Auth:SignOut (0.6):
     - ChikaCore/Error
     - ChikaCore/Service:Auth
     - FirebaseCommunity/Auth
-  - ChikaFirebase/Validator:Auth (0.5)
-  - ChikaFirebase/Writer:ImageUploader (0.5):
+  - ChikaFirebase/Validator:Auth (0.6)
+  - ChikaFirebase/Writer:ImageUploader (0.6):
     - ChikaCore/Error
     - ChikaCore/Service:Writer
     - FirebaseCommunity/Auth
     - FirebaseCommunity/Storage
-  - ChikaFirebase/Writer:OfflinePresenceSwitcher (0.5):
+  - ChikaFirebase/Writer:OfflinePresenceSwitcher (0.6):
     - ChikaCore/Service:Writer
     - FirebaseCommunity/Auth
     - FirebaseCommunity/Database
-  - ChikaFirebase/Writer:OnlinePresenceSwitcher (0.5):
+  - ChikaFirebase/Writer:OnlinePresenceSwitcher (0.6):
     - ChikaCore/Error
     - ChikaCore/Service:Writer
     - FirebaseCommunity/Auth
     - FirebaseCommunity/Database
+  - ChikaSignIn (0.0.3):
+    - ChikaFirebase/Auth:SignIn
+    - ChikaFirebase/Writer:OnlinePresenceSwitcher
   - FirebaseCommunity/Auth (0.1.6):
     - FirebaseCommunity/Core
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
@@ -65,26 +69,31 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GTMSessionFetcher/Core (1.1.12)
   - leveldb-library (1.20)
+  - SDWebImage (4.2.3):
+    - SDWebImage/Core (= 4.2.3)
+  - SDWebImage/Core (4.2.3)
 
 DEPENDENCIES:
-  - ChikaFirebase/Auth:SignIn (from `../ChikaFirebase`)
-  - ChikaFirebase/Auth:SignOut (from `../ChikaFirebase`)
-  - ChikaFirebase/Writer:ImageUploader (from `../ChikaFirebase`)
-  - ChikaFirebase/Writer:OfflinePresenceSwitcher (from `../ChikaFirebase`)
-  - ChikaFirebase/Writer:OnlinePresenceSwitcher (from `../ChikaFirebase`)
-
-EXTERNAL SOURCES:
-  ChikaFirebase:
-    :path: ../ChikaFirebase
+  - ChikaAssets
+  - ChikaFirebase/Auth:SignIn
+  - ChikaFirebase/Auth:SignOut
+  - ChikaFirebase/Writer:ImageUploader
+  - ChikaFirebase/Writer:OfflinePresenceSwitcher
+  - ChikaFirebase/Writer:OnlinePresenceSwitcher
+  - ChikaSignIn
+  - SDWebImage
 
 SPEC CHECKSUMS:
+  ChikaAssets: 00d783b7b1d4a85b49e80d85bb367186471f2bf0
   ChikaCore: a3c5b783a31be2f35d86d6626a6ba565c1a9ac6d
-  ChikaFirebase: 68776efdca902535e17d159fd764ab21ffd31b21
+  ChikaFirebase: 1dbb8a66ef6380c71d97ffd9ee7504aa921ec990
+  ChikaSignIn: f762f2c425e6a0611f025c490412279e3e3b2d39
   FirebaseCommunity: 1f9a0e48654316b4ffe4c830db0ce72b9e2d2c9d
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
 
-PODFILE CHECKSUM: b52a10faa1ff1cb86eb866a7532ef2b8d0a06a1a
+PODFILE CHECKSUM: 45cb7ae300ef55a393327239e46d0ab9a72029aa
 
 COCOAPODS: 1.3.1
