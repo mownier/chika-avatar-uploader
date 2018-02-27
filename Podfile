@@ -5,13 +5,18 @@ platform :ios, '11.0'
 use_frameworks!
 
 target 'ChikaAvatarUploader' do
-    pod 'ChikaFirebase/Auth:SignIn', :path => '../ChikaFirebase'
-    pod 'ChikaFirebase/Auth:SignOut', :path => '../ChikaFirebase'
-    pod 'ChikaFirebase/Writer:OnlinePresenceSwitcher', :path => '../ChikaFirebase'
-    pod 'ChikaFirebase/Writer:OfflinePresenceSwitcher', :path => '../ChikaFirebase'
+    pod 'ChikaFirebase/Auth:SignIn'
+    pod 'ChikaFirebase/Auth:SignOut'
+    pod 'ChikaFirebase/Writer:OnlinePresenceSwitcher'
+    pod 'ChikaFirebase/Writer:OfflinePresenceSwitcher'
 	
-    pod 'ChikaFirebase/Writer:ImageUploader', :path => '../ChikaFirebase'
-
+    pod 'ChikaSignIn'
+    
+    pod 'ChikaAssets'
+    pod 'ChikaFirebase/Writer:ImageUploader'
+    
+    pod 'SDWebImage'
+    
     target 'ChikaAvatarUploaderTests' do
         inherit! :search_paths
         # Pods for testing
