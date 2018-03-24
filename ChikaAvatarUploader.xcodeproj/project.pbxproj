@@ -21,6 +21,8 @@
 		48922FCD20419FC5001D10E8 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922FCC20419FC5001D10E8 /* Factory.swift */; };
 		48922FCF2041A1BB001D10E8 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922FCE2041A1BB001D10E8 /* Style.swift */; };
 		48922FD12041A936001D10E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48922FD02041A936001D10E8 /* GoogleService-Info.plist */; };
+		48C60B6620662445004103B2 /* AvatarSelectorContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C60B6520662445004103B2 /* AvatarSelectorContainer.swift */; };
+		48C60B6820662498004103B2 /* AvatarSelectorContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C60B6720662498004103B2 /* AvatarSelectorContainerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		48922FCC20419FC5001D10E8 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		48922FCE2041A1BB001D10E8 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		48922FD02041A936001D10E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../ChikaFirebaseDemo/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		48C60B6520662445004103B2 /* AvatarSelectorContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSelectorContainer.swift; sourceTree = "<group>"; };
+		48C60B6720662498004103B2 /* AvatarSelectorContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSelectorContainerFactory.swift; sourceTree = "<group>"; };
 		49F9F20679CBB0F717B0160E /* Pods_ChikaAvatarUploaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChikaAvatarUploaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD10ADF547B2F4D4A93E997 /* Pods-ChikaAvatarUploaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaAvatarUploaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaAvatarUploaderTests/Pods-ChikaAvatarUploaderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		847DE98ABE02862801364148 /* Pods-ChikaAvatarUploader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChikaAvatarUploader.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChikaAvatarUploader/Pods-ChikaAvatarUploader.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				48922FC82041990F001D10E8 /* AvatarUploader.storyboard */,
+				48C60B6520662445004103B2 /* AvatarSelectorContainer.swift */,
+				48C60B6720662498004103B2 /* AvatarSelectorContainerFactory.swift */,
 				48922FCC20419FC5001D10E8 /* Factory.swift */,
 				48922FC620419886001D10E8 /* Scene.swift */,
 				48922FCE2041A1BB001D10E8 /* Style.swift */,
@@ -322,6 +328,7 @@
 				"${BUILT_PRODUCTS_DIR}/ChikaCore/ChikaCore.framework",
 				"${BUILT_PRODUCTS_DIR}/ChikaFirebase/ChikaFirebase.framework",
 				"${BUILT_PRODUCTS_DIR}/ChikaSignIn/ChikaSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/ChikaUI/ChikaUI.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseCommunity/FirebaseCommunity.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -333,6 +340,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChikaCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChikaFirebase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChikaSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChikaUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCommunity.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -386,7 +394,9 @@
 			files = (
 				48922FA82041967B001D10E8 /* ViewController.swift in Sources */,
 				48922FCF2041A1BB001D10E8 /* Style.swift in Sources */,
+				48C60B6820662498004103B2 /* AvatarSelectorContainerFactory.swift in Sources */,
 				48922FCB20419AFE001D10E8 /* Theme.swift in Sources */,
+				48C60B6620662445004103B2 /* AvatarSelectorContainer.swift in Sources */,
 				48922FA62041967B001D10E8 /* AppDelegate.swift in Sources */,
 				48922FC720419886001D10E8 /* Scene.swift in Sources */,
 				48922FCD20419FC5001D10E8 /* Factory.swift in Sources */,
