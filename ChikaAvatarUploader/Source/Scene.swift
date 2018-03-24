@@ -8,7 +8,7 @@
 
 import UIKit
 import ChikaCore
-import SDWebImage
+import Kingfisher
 
 public final class Scene: UIViewController {
 
@@ -161,11 +161,13 @@ public final class Scene: UIViewController {
             return false
         }
         
-        avatarView.sd_setImage(
-            with: url,
-            placeholderImage: #imageLiteral(resourceName: "avatar"),
-            options: .cacheMemoryOnly,
-            completed: nil)
+        let resource = ImageResource(downloadURL: url!)
+        avatarView.kf.setImage(
+            with: resource,
+            placeholder: #imageLiteral(resourceName: "avatar"),
+            options: [ .cacheMemoryOnly ],
+            progressBlock: nil,
+            completionHandler: nil)
         
         return true
     }

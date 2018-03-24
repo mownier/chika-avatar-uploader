@@ -15,7 +15,7 @@ target 'ChikaAvatarUploader' do
     pod 'ChikaAssets'
     pod 'ChikaFirebase/Writer:ImageUploader'
     
-    pod 'SDWebImage'
+    pod 'Kingfisher'
     
     target 'ChikaAvatarUploaderTests' do
         inherit! :search_paths

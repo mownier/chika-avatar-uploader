@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
   s.dependency 'ChikaAssets'
   s.dependency 'ChikaFirebase/Writer:ImageUploader'
 
-  s.dependency 'SDWebImage'
+  s.dependency 'Kingfisher'
 end
