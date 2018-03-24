@@ -43,6 +43,9 @@ PODS:
   - ChikaSignIn (0.0.3):
     - ChikaFirebase/Auth:SignIn
     - ChikaFirebase/Writer:OnlinePresenceSwitcher
+  - ChikaUI (0.0.5):
+    - ChikaAssets
+    - Kingfisher
   - FirebaseCommunity/Auth (0.1.6):
     - FirebaseCommunity/Core
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
@@ -79,6 +82,7 @@ DEPENDENCIES:
   - ChikaFirebase/Writer:OfflinePresenceSwitcher
   - ChikaFirebase/Writer:OnlinePresenceSwitcher
   - ChikaSignIn
+  - ChikaUI
   - Kingfisher
 
 SPEC CHECKSUMS:
@@ -86,12 +90,13 @@ SPEC CHECKSUMS:
   ChikaCore: a3c5b783a31be2f35d86d6626a6ba565c1a9ac6d
   ChikaFirebase: 1dbb8a66ef6380c71d97ffd9ee7504aa921ec990
   ChikaSignIn: f762f2c425e6a0611f025c490412279e3e3b2d39
+  ChikaUI: 12bbd7ab2681dbf96c96b736e807a95a33c582e8
   FirebaseCommunity: 1f9a0e48654316b4ffe4c830db0ce72b9e2d2c9d
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
 
-PODFILE CHECKSUM: e41a495692c133a5ef98047a51e986811535c158
+PODFILE CHECKSUM: 8736dd17b1dd836a7bd8433000eee497a35e491d
 
 COCOAPODS: 1.4.0

@@ -12,6 +12,7 @@ target 'ChikaAvatarUploader' do
 	
     pod 'ChikaSignIn'
     
+    pod 'ChikaUI'
     pod 'ChikaAssets'
     pod 'ChikaFirebase/Writer:ImageUploader'
     
