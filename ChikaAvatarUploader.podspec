@@ -10,7 +10,10 @@ Pod::Spec.new do |s|
   s.source_files = 'ChikaAvatarUploader/Source/*.swift'
   s.resources = ['ChikaAvatarUploader/Source/AvatarUploader.storyboard']
   s.requires_arc = true
+  
+  s.swift_version = '4.0'
 
+  s.dependency 'ChikaUI'
   s.dependency 'ChikaAssets'
   s.dependency 'ChikaFirebase/Writer:ImageUploader'
 
