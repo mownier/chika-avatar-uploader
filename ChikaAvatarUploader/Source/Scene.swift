@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChikaUI
 import ChikaCore
 import Kingfisher
 
@@ -18,12 +19,12 @@ public final class Scene: UIViewController {
     
     var theme: Theme!
     
+    var avatarSelector: (() -> AvatarSelectorContainer)!
+    
     var imageUploader: (() -> (ImageUploader & Cancelable & Resumable & Pauseable))!
     var imageUploaderOperator: ImageUploaderOperator!
     
     var currentImageUploader: (ImageUploader & Cancelable & Resumable & Pauseable)?
-    
-    var imageFileURL: URL?
     
     var output: ((Result<URL>) -> Void)?
     var onProgress: ((Progress?) -> Void)?
@@ -56,7 +57,6 @@ public final class Scene: UIViewController {
                     break
                 }
                 
-                imageFileURL = nil
                 progressLabel.isHidden = true
                 currentImageUploader = nil
                 
@@ -177,23 +177,19 @@ public final class Scene: UIViewController {
             return
         }
         
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        present(imagePicker, animated: true, completion: nil)
+        present(avatarSelector(), animated: true, completion: nil)
     }
     
     func getImageForUpload() -> UIImage? {
         guard state == .neutral,
-            imageFileURL != nil,
             imageUploader != nil,
             currentImageUploader == nil,
             imageUploaderOperator != nil,
-            let data = try? Data(contentsOf: imageFileURL!, options: []),
-            let image = UIImage(data: data) else {
+            selectedAvatarView?.image != nil else {
                 return nil
         }
         
-        return image
+        return selectedAvatarView.image
     }
     
     enum State: Equatable {
@@ -220,23 +216,6 @@ public final class Scene: UIViewController {
             return lhs.intValue == rhs.intValue
         }
         
-    }
-    
-}
-
-extension Scene: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
-    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        defer {
-            picker.dismiss(animated: true, completion: nil)
-        }
-        
-        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage, let url = info[UIImagePickerControllerImageURL] as? URL else {
-            return
-        }
-        
-        selectedAvatarView.image = image
-        imageFileURL = url
     }
     
 }
