@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChikaUI
 import ChikaCore
 import ChikaFirebase
 
@@ -65,6 +66,17 @@ public final class Factory {
         
         scene.imageUploader = { ImageUploader(style: imageUploaderStyle) }
         scene.imageUploaderOperator = ImageUploaderOperation()
+        
+        scene.avatarSelector = {
+            AvatarSelectorContainerFactory().onDone({ container, image in
+                scene.selectedAvatarView.image = image
+                container.dismiss(animated: true, completion: nil)
+                
+            }).onCancel({ container in
+                container.dismiss(animated: true, completion: nil)
+            
+            }).build()
+        }
         
         return scene
     }
